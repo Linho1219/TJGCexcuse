@@ -57,13 +57,13 @@ h1 {
   margin: 0.5em 0 0 0;
 }
 .about {
-  margin:1.2em 0;
+  margin: 1.2em 0;
 }
-.about a{
-  color:#888;
-  text-decoration:none;
+.about a {
+  color: #888;
+  text-decoration: none;
 }
-.about a:hover{
+.about a:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -83,6 +83,11 @@ h1 {
   border: #aaa 2px solid;
   outline: none;
   font-family: sans-serif;
+  transition: border-color 0.1s;
+}
+.panel input:focus,
+.panel select:focus {
+  border-color: #1967D2;
 }
 main {
   max-width: 80ch;
