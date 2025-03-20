@@ -71,6 +71,7 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .panel input,
 .panel select {
@@ -88,5 +89,6 @@ main {
   margin: 2em auto;
   font-size: 18px;
   line-height: 1.5;
+  padding: 0 1em;
 }
 </style>
