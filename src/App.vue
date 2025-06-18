@@ -10,6 +10,7 @@
         <option value="beingcopied">被抄袭</option>
         <option value="format">格式</option>
         <option value="encoding">编码</option>
+        <option value="late">晚交</option>
       </select>
       <input type="text" placeholder="信息" v-model.trim="personInfo" />
       <input
@@ -33,12 +34,14 @@
     <p v-if="excType === 'encoding'">
       沈坚老师您好，我是{{ personInfo }}，非常抱歉，这次的高程作业我犯了一个非常低级的错误，我没有认真阅读材料，结果导致提交的作业编码有问题。我没有按照文档中的要求正确检查文件编码，正确安装扩展插件。是我缺乏规则意识，存在侥幸心理，因此我心甘情愿担负责任。一切规则说到底是为了让同学学到知识，因此我们保证绝对不会再有自作聪明的行为发生，我今后一定改过自新，重新审视自己对待学习的态度，上课一定专心听讲。
     </p>
+    <p v-if="excType === 'late'">
+      尊敬的沈坚老师：<br/><br/>您好！我是您的学生{{ personInfo }}。很抱歉未能按时在DDL前提交《高级语言程序设计》的作业。对此我深感愧疚，也深刻意识到自己的不足。<br/>此次作业我投入了非常多的努力，但因个人疏忽未能及时提交。恳请老师能给我一次补交的机会，我会立即将已完成的部分提交至平台，并承诺在今后的学习中严格规划时间，避免类似问题发生。<br/>无论您是否同意我的请求，我都接受相应的扣分或其他处理。再次为我的拖延向您致歉，感谢您的理解与指教！<br/><br/>此致<br/>敬礼！<br/><br/>学生：{{ personInfo }}</p>
   </main>
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
-const excType = ref<"copy" | "beingcopied" | "format" | "encoding">("copy");
-const personInfo = ref("");
+const excType = ref<"copy" | "beingcopied" | "format" | "encoding" | "late">("late");
+const personInfo = ref("张三");
 const personInfo2 = ref("");
 </script>
 <style>
